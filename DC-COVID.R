@@ -2,3 +2,5 @@
 # Label the y-axis
 ggplot(confirmed_cases_worldwide, aes(date, cum_cases)) +
 geom_line() + labs(y = "Cumulative confirmed cases")
+
+
