@@ -2,7 +2,7 @@ library(readr)
 library(ggplot2)
 library(dplyr)
 
-confirmed_cases_worldwide <- read_csv(datasets/confirmed_cases_worldwide.csv)
+confirmed_cases_worldwide <- read_csv("confirmed_cases_worldwide.csv")
 
 # Draw a line plot of cumulative cases vs. date
 # Label the y-axis
@@ -10,7 +10,7 @@ ggplot(confirmed_cases_worldwide, aes(date, cum_cases)) +
 geom_line() + labs(y = "Cumulative confirmed cases")
 
 # Read in datasets/confirmed_cases_china_vs_world.csv
-confirmed_cases_china_vs_world <- read_csv("datasets/confirmed_cases_china_vs_world.csv")
+confirmed_cases_china_vs_world <- read_csv("confirmed_cases_china_vs_world.csv")
 
 # See the result
 glimpse(confirmed_cases_china_vs_world)
@@ -68,7 +68,7 @@ plt_not_china_trend_lin +
   scale_y_log10()
 
 # Run this to get the data for each country
-confirmed_cases_by_country <- read_csv("datasets/confirmed_cases_by_country.csv")
+confirmed_cases_by_country <- read_csv("confirmed_cases_by_country.csv")
 glimpse(confirmed_cases_by_country)
 
 # Group by country, summarize to calculate total cases, find the top 7
